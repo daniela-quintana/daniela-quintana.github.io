@@ -69,10 +69,9 @@ Durante este desafío forkeé y contribuí a los siguientes proyectos de compañ
 
 | Requisito                                                                 | Estado |
 |---------------------------------------------------------------------------|--------|
-| Barra de navegación con link al portafolio                               | ✅     |
-| Sección de educación y experiencia laboral                               | ✅     |
-| Footer con enlaces                                                       | ✅     |
-| Página adicional para portafolio con imágenes                            | ✅     |
-| Proyecto desplegado en GitHub Pages                                      | ✅     |
+| Construye un CV utilizando HTML y CSS                                     | ✅     |
+| El CV contiene los 5 elementos solicitados                                | ✅     |
+| Construye una página para el portafolio, incluyendo imágenes              | ✅     |
+| Despliegue en Github Pages, donde el CV es la página principal            | ✅     |
 | Fork a al menos 2 compañeros                                              | ✅     |
-| Al menos 1 commit por cada proyecto forkeado                             | ✅     |
+| Al menos 1 commit por cada proyecto forkeado                              | ✅     |
