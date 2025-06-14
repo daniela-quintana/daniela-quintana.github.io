@@ -2,540 +2,207 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniela Quintana - Desarrolladora Fullstack</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600%7CRaleway:300,400" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f0f3f7;
-            color: #333;
-            line-height: 1.6;
-            padding: 30px;
-        }
-
-        p {
-            font-size: smaller;
-        }
-
-        span {
-            font-size: smaller;
-        }
-
-        .resume-container {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .neumorph-card {
-            background: #f0f3f7;
-            border-radius: 20px;
-            box-shadow: 8px 8px 16px #d9dde3,
-                -8px -8px 16px #ffffff;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        .neumorph-button {
-            background: #f0f3f7;
-            border-radius: 20px;
-            box-shadow: 8px 8px 16px #d9dde3,
-                -8px -8px 16px #ffffff;
-            padding: 15px;
-            transition: all 0.3s ease;
-            width: 100%;
-            font-size: smaller;
-            margin-top: 20px;
-            text-align: center;
-            font-weight: bolder;
-            color: #565ebb;
-            cursor: pointer;
-        }
-
-        .neumorph-button:hover {
-            box-shadow: inset 4px 4px 8px #d9dde3,
-                inset -4px -4px 8px #ffffff;
-        }
-
-        .sidebar {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 20px;
-            border: 5px solid #f0f3f7;
-            box-shadow: 5px 5px 10px #d9dde3,
-                -5px -5px 10px #ffffff,
-                inset 3px 3px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #3a3a3a;
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-        }
-
-        h2 {
-            color: #565ebb;
-            font-size: 1rem;
-            font-weight: 400;
-        }
-
-        h3 {
-            color: #565ebb;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            position: relative;
-            padding-left: 15px;
-        }
-
-        h3::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 2px;
-            height: 20px;
-            width: 4px;
-            background: #565ebb;
-            border-radius: 3px;
-        }
-
-        .contact-info {
-            margin-top: 10px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-
-        .contact-icon {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #f0f3f7;
-            box-shadow: 3px 3px 6px #d9dde3,
-                -3px -3px 6px #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-            font-size: 14px;
-            color: #565ebb;
-        }
-
-        .main-content {
-            flex: 2;
-            min-width: 300px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .experience-item,
-        .education-item {
-            margin-bottom: 20px;
-        }
-
-        .job-title {
-            font-weight: 600;
-            color: #3a3a3a;
-            margin-bottom: 3px;
-        }
-
-        .company {
-            font-weight: 500;
-            color: #565ebb;
-            margin-bottom: 5px;
-        }
-
-        .date {
-            color: #777;
-            font-size: 0.8rem;
-            margin-bottom: 8px;
-        }
-
-        .footer-description {
-            font-size: small;
-            color: #565ebb;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background: #f0f3f7;
-            border-radius: 15px;
-            padding: 5px 15px;
-            box-shadow: 3px 3px 6px #d9dde3,
-                -3px -3px 6px #ffffff;
-            font-size: 0.9rem;
-            font-size: smaller;
-        }
-
-        .neumorph-nav {
-            background: #f0f3f7;
-            border-radius: 20px;
-            box-shadow: 8px 8px 16px #d9dde3,
-                -8px -8px 16px #ffffff;
-            padding: 15px 30px;
-            margin-bottom: 30px;
-            width: 100%;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-        }
-
-        .menu-toggle {
-            display: flex;
-            right: 20px;
-            top: 15px;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-
-        .hamburger {
-            width: 25px;
-            height: 3px;
-            background: #565ebb;
-            display: none;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger:before,
-        .hamburger:after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 3px;
-            background: #565ebb;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger:before {
-            top: -8px;
-        }
-
-        .hamburger:after {
-            top: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-            margin: 0;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #565ebb;
-            font-weight: 500;
-            padding: 8px 15px;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            font-size: smaller;
-        }
-
-        .nav-links a:hover {
-            box-shadow: inset 4px 4px 8px #d9dde3,
-                inset -4px -4px 8px #ffffff;
-        }
-
-        .neumorph-footer {
-            background: #f0f3f7;
-            border-radius: 20px;
-            box-shadow: 8px 8px 16px #d9dde3,
-                -8px -8px 16px #ffffff;
-            padding: 20px 30px;
-            width: 100%;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #f0f3f7;
-            box-shadow: 3px 3px 6px #d9dde3,
-                -3px -3px 6px #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #565ebb;
-            transition: all 0.3s ease;
-            margin: 10px
-        }
-
-        .social-links a:hover {
-            box-shadow: inset 3px 3px 6px #d9dde3,
-                inset -3px -3px 6px #ffffff;
-            transform: translateY(2px);
-        }
-
-        @media (max-width: 768px) {
-            body {
-                margin: 20px;
-                padding: 0;
-            }
-
-            .sidebar,
-            .main-content {
-                flex: 1 1 100%;
-            }
-
-            .resume-container {
-                gap: 0;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-                margin: 0;
-                padding: 0;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .neumorph-nav {
-                padding: 25px;
-                ;
-            }
-
-            .hamburger {
-                display: block;
-            }
-        }
-
-        .menu-toggle.active .hamburger {
-            background: transparent;
-        }
-
-        .menu-toggle.active .hamburger:before {
-            transform: rotate(45deg);
-            top: 0;
-        }
-
-        .menu-toggle.active .hamburger:after {
-            transform: rotate(-45deg);
-            top: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniela Quintana - Desarrolladora Fullstack</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600%7CRaleway:300,400" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-    <nav class="neumorph-nav">
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="hamburger"></span>
-        </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./portfolio.html">Portafolio</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <div class="resume-container">
-        <aside class="sidebar">
-            <div class="neumorph-card d-flex flex-column align-items-center">
-                <img src="./assets/images/perfil.jpg" alt="Foto de perfil" class="profile-img">
-                <h1>Daniela Quintana</h1>
-                <h2>Desarrolladora Fullstack Junior</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <span class="job-description">contacto@danielaquintana.cl</span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <span class="job-description">+569 9814 8758</span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🏠</div>
-                        <span class="job-description">Santiago, Chile</span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🌍</div>
-                        <span class="job-description"><a class="nav-link" href="./index.html">Página web</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">⏳</div>
-                        <span class="job-description">Disponibilidad Inmediata</span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="neumorph-button">
-                            <span>
-                                <a class="nav-link" href="./portfolio.html">Ver mis proyectos</a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="neumorph-card about-me">
-                <h3>Sobre mí</h3>
-                <p class="job-description">Soy una desarrolladora con experiencia con 4 años de experiencia en el área
-                    de Frontend. Soy una
-                    persona autodidacta y con gran
-                    pasión por el aprendizaje. Me especializo en crear interfaces de usuario atractivas y funcionales,
-                    con atención a los detalles y buenas prácticas de desarrollo.</p>
-            </div>
-
-            <div class="neumorph-card">
-                <h3>Habilidades</h3>
-                <div class="skills">
-                    <span class="skill-tag ">JavaScript</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">Angular</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">UX/UI</span>
-                    <span class="skill-tag">Design Thinking</span>
-                </div>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <section class="neumorph-card">
-                <h3>Experiencia Laboral</h3>
-                <div class="experience-item">
-                    <div class="date">Diciembre 2023 - Junio 2024</div>
-                    <div class="job-title">Desarrolladora Front-End</div>
-                    <div class="company">Muruna (Proyecto Scotiabank)</div>
-                    <p class="job-description">Trabajé como programadora "flotante", adaptándome a diversos proyectos y
-                        nuevas tecnologías como Astro y Python. Desarrollé una plataforma interna de testeo, maqueta de
-                        juego para fidelización de clientes e implementé cron jobs.</p>
-                </div>
-                <hr>
-                <div class="experience-item">
-                    <div class="date">2021 - 2023</div>
-                    <div class="job-title">Ingeniera de Desarrollo Tecnológico</div>
-                    <div class="company">Copec</div>
-                    <p class="job-description">Desarrollé proyectos en Angular y React, adquiriendo conocimientos de
-                        arquitectura de software. Lideré estrategias de trabajo, buenas prácticas, equipo de Front-End y
-                        área de UX/UI, realizando User Research y Design Thinking.</p>
-                </div>
-                <hr>
-                <div class="experience-item">
-                    <div class="date">Mayo 2021 - Julio 2021</div>
-                    <div class="job-title">Desarrolladora Front-End</div>
-                    <div class="company">Thecne</div>
-                    <p class="job-description">Desarrollo de intranet empresarial utilizando Bootstrap, AngularJS y
-                        Java. Perfeccioné habilidades en desarrollo web, creación de interfaces e integración de
-                        tecnologías.</p>
-                </div>
-                <hr>
-                <div class="experience-item">
-                    <div class="date">Febrero 2020 - Junio 2020</div>
-                    <div class="job-title">Desarrolladora Front-End</div>
-                    <div class="company">def4U (Proyecto Cámara de Comercio de Santiago)</div>
-                    <p class="job-description">Desarrollo con Angular y Bootstrap, manteniendo comunicación directa con
-                        el cliente para comprender necesidades y expectativas.</p>
-                </div>
-            </section>
-
-            <section class="neumorph-card">
-                <h3>Educación</h3>
-                <div class="education-item">
-                    <small>2025</small>
-                    <div class="job-title">Desarrollo Full Stack JavaScript</div>
-                    <div class="company">Desafío Latam</div>
-                </div>
-                <div class="education-item">
-                    <small>2025</small>
-                    <div class="job-title">Despegando hacia la nube AWS: Cloud para principiantes</div>
-                    <div class="company">Laboratoria</div>
-                </div>
-                <div class="education-item">
-                    <small>2023</small>
-                    <div class="job-title">Taller Front-End</div>
-                    <div class="company">Universidad de Santiago</div>
-                </div>
-                <div class="education-item">
-                    <small>2022</small>
-                    <div class="job-title">Diplomado en Ciberseguridad</div>
-                    <div class="company">Universidad de Chile</div>
-                </div>
-                <div class="education-item">
-                    <small>2019</small>
-                    <div class="job-title">Diplomado Front-End</div>
-                    <div class="company">Laboratoria</div>
-                </div>
-                <div class="education-item">
-                    <small>2018</small>
-                    <div class="job-title">Diplomado en Diseño Gráfico</div>
-                    <div class="company">Instituto Crearte</div>
-                </div>
-            </section>
-        </main>
+  <nav class="neumorph-nav">
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="hamburger"></span>
     </div>
+    <ul class="nav-links nav-link" id="nav-links">
+      <li><a class="nav-link" href="./index.html">Inicio</a></li>
+      <li><a class="nav-link" href="./portfolio.html">Portafolio</a></li>
+      <li><a class="nav-link" href="./contact.html">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <footer class="neumorph-footer">
-        <div class="social-links">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+  <div class="resume-container">
+    <aside class="sidebar">
+      <div class="neumorph-card d-flex flex-column align-items-center">
+        <img src="./assets/images/profile.jpg" alt="Foto de perfil" class="profile-img">
+        <h1>Daniela Quintana</h1>
+        <h2>Desarrolladora Fullstack Junior</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <span class="job-description">contacto@danielaquintana.cl</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <span class="job-description">+569 9814 8758</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🏠</div>
+            <span class="job-description">Santiago, Chile</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🌍</div>
+            <span class="job-description"><a class="nav-link" href="https://www.danielaquintana.cl">Página
+                web</a></span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⏳</div>
+            <span class="job-description">Disponibilidad Inmediata</span>
+          </div>
+          <div class="contact-item">
+            <div class="neumorph-button">
+              <span>
+                <a class="nav-link" href="./portfolio.html">Ver mis proyectos</a>
+              </span>
+            </div>
+          </div>
         </div>
-        <p class="footer-description">© 2025 Daniela Quintana - Todos los derechos reservados</p>
-    </footer>
+      </div>
 
-    <script>
-        const menuToggle = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
+      <div class="neumorph-card about-me">
+        <h3>Sobre mí</h3>
+        <p class="job-description">Soy una desarrolladora con experiencia con 4 años de experiencia en el área
+          de Frontend. Soy una
+          persona autodidacta y con gran
+          pasión por el aprendizaje. Me especializo en crear interfaces de usuario atractivas y funcionales,
+          con atención a los detalles y buenas prácticas de desarrollo.</p>
+      </div>
 
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-    </script>
+      <div class="neumorph-card">
+        <h3>Habilidades</h3>
+        <div class="skills">
+          <span class="skill-tag ">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Bootstrap</span>
+          <span class="skill-tag">UX/UI</span>
+          <span class="skill-tag">Design Thinking</span>
+          <span class="skill-tag">Astro</span>
+          <span class="skill-tag">Apolo</span>
+          <span class="skill-tag">Git/GitHub</span>
+          <span class="skill-tag">Scrum</span>
+          <span class="skill-tag">API REST</span>
+          <span class="skill-tag">GraphQL</span>
+          <span class="skill-tag">Ciberseguridad</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Metodologías Ágiles</span>
+
+        </div>
+      </div>
+
+      <div class="neumorph-card">
+        <h3>Curriculum</h3>
+        <div class="neumorph-button">
+          <span>
+            <a href="./assets/resume/CV Daniela Quintana 2025.pdf" download="CV Daniela Quintana 2025.pdf"
+              class="nav-link"><i class="fas fa-download me-1"></i> Descargar CV</a>
+          </span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="neumorph-card">
+        <h3>Experiencia Laboral</h3>
+        <div class="experience-item">
+          <div class="date">Diciembre 2023 - Junio 2024</div>
+          <div class="job-title">Desarrolladora Front-End</div>
+          <div class="company">Muruna (Proyecto Scotiabank)</div>
+          <p class="job-description">Trabajé como programadora "flotante", adaptándome a diversos proyectos y
+            nuevas tecnologías como Astro y Python. Desarrollé una plataforma interna de testeo, maqueta de
+            juego para fidelización de clientes e implementé cron jobs.</p>
+        </div>
+        <hr>
+        <div class="experience-item">
+          <div class="date">2021 - 2023</div>
+          <div class="job-title">Ingeniera de Desarrollo Tecnológico</div>
+          <div class="company">Copec</div>
+          <p class="job-description">Desarrollé proyectos en Angular y React, adquiriendo conocimientos de
+            arquitectura de software. Lideré estrategias de trabajo, buenas prácticas, equipo de Front-End y
+            área de UX/UI, realizando User Research y Design Thinking.</p>
+        </div>
+        <hr>
+        <div class="experience-item">
+          <div class="date">Mayo 2021 - Julio 2021</div>
+          <div class="job-title">Desarrolladora Front-End</div>
+          <div class="company">Thecne</div>
+          <p class="job-description">Desarrollo de intranet empresarial utilizando Bootstrap, AngularJS y
+            Java. Perfeccioné habilidades en desarrollo web, creación de interfaces e integración de
+            tecnologías.</p>
+        </div>
+        <hr>
+        <div class="experience-item">
+          <div class="date">Febrero 2020 - Junio 2020</div>
+          <div class="job-title">Desarrolladora Front-End</div>
+          <div class="company">def4U (Proyecto Cámara de Comercio de Santiago)</div>
+          <p class="job-description">Desarrollo con Angular y Bootstrap, manteniendo comunicación directa con
+            el cliente para comprender necesidades y expectativas.</p>
+        </div>
+      </section>
+
+      <section class="neumorph-card">
+        <h3>Educación</h3>
+        <div class="education-item">
+          <small>2025</small>
+          <div class="job-title">Desarrollo Full Stack JavaScript</div>
+          <div class="company">Desafío Latam</div>
+        </div>
+        <div class="education-item">
+          <small>2025</small>
+          <div class="job-title">Despegando hacia la nube AWS: Cloud para principiantes</div>
+          <div class="company">Laboratoria</div>
+        </div>
+        <div class="education-item">
+          <small>2023</small>
+          <div class="job-title">Taller Front-End</div>
+          <div class="company">Universidad de Santiago</div>
+        </div>
+        <div class="education-item">
+          <small>2022</small>
+          <div class="job-title">Diplomado en Ciberseguridad</div>
+          <div class="company">Universidad de Chile</div>
+        </div>
+        <div class="education-item">
+          <small>2019</small>
+          <div class="job-title">Diplomado Front-End</div>
+          <div class="company">Laboratoria</div>
+        </div>
+        <div class="education-item">
+          <small>2018</small>
+          <div class="job-title">Diplomado en Diseño Gráfico</div>
+          <div class="company">Instituto Crearte</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="neumorph-footer">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/daniela-quintana/" target="_blank" aria-label="LinkedIn"><i
+          class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/daniela-quintana" target="_blank" aria-label="GitHub"><i
+          class="fab fa-github"></i></a>
+      <a href="mailto:contacto@danielaquintana.cl" aria-label="Email"><i
+          class="fa-solid fa-envelope"></i></a>
+    </div>
+    <p class="footer-description">© 2025 Daniela Quintana - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>
