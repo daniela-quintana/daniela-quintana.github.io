@@ -1,8 +1,7 @@
 # 📄 CV Web - Daniela Quintana
 
-Este es mi currículum vitae digital desarrollado con HTML y CSS. 
+### 🚀 El sitio está desplegado en GitHub Pages:
 
-El sitio está desplegado en GitHub Pages:
 🔗 https://daniela-quintana.github.io
 
 ---
